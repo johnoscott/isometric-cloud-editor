@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" data-site>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; form-action 'none'"
+    />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="description" content="An isometric editor for cloud and network diagrams, in the browser." />
+    <title>Isometric Cloud Editor</title>
+    <link rel="icon" href="data:," />
+    <style>
+      :root { color-scheme: light dark; }
+      html, body { height: 100%; margin: 0; }
+      body { display: flex; flex-direction: column; }
+      body > #app { flex: 1 1 auto; min-height: 0; height: auto; }
+      .site-foot { flex: none; display: flex; gap: 12px; align-items: center; justify-content: space-between;
+        padding: 4px 12px; font: 11px/1.4 system-ui, sans-serif; color: #5b6472; background: #f6f7f9;
+        border-top: 1px solid #dde1e6; }
+      .site-foot button { font: inherit; color: inherit; background: none; border: 0; padding: 2px 4px;
+        text-decoration: underline; cursor: pointer; flex: none; }
+      #about { max-width: min(520px, calc(100vw - 32px)); padding: 16px 20px; border: 1px solid #dde1e6;
+        border-radius: 8px; font: 13px/1.5 system-ui, sans-serif; color: #1d2330; background: #fff; }
+      #about::backdrop { background: rgb(0 0 0 / .25); }
+      #about h2 { margin: 0 0 8px; font-size: 15px; }
+      #about p { margin: 6px 0; }
+      #about a { color: inherit; }
+      #about code { font-size: 12px; }
+      @media (prefers-color-scheme: dark) {
+        .site-foot { color: #a3abb8; background: #14171c; border-top-color: #2a2f37; }
+        #about { color: #e3e7ee; background: #1b1f26; border-color: #2f353f; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <footer class="site-foot">
+      <span>Not affiliated with or endorsed by Amazon Web Services. AWS service names identify the services only; all
+        shapes are original drawings.</span>
+      <button type="button" popovertarget="about">About</button>
+    </footer>
+    <div id="about" popover>
+      <h2>Isometric Cloud Editor</h2>
+      <p>An editor for cloud and network diagrams in isometric view. Edit the drawing or its YAML text, and switch
+        between 3D and 2D. Everything runs in this page: nothing is sent anywhere.</p>
+      <p>Isometric Cloud Editor (MIT), built on <code>@johnoscott/isometric-engine</code> 0.9.0 (MIT).</p>
+      <p>Third-party software in this page: Lucide icons (ISC (some icons MIT, from Feather)), yaml (ISC). The editor's and the engine's licences, and these notices: <a href="./LICENSES.txt">LICENSES.txt</a>.</p>
+      <p>Not affiliated with or endorsed by Amazon Web Services. AWS service names identify the services only; all
+        shapes are original drawings.</p>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
