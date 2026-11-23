@@ -1,5 +1,9 @@
 # Isometric Cloud Editor
 
+**[Open the live demo →](https://johnoscott.github.io/isometric-cloud-editor/)**
+
+[![The Isometric Cloud Editor: a hybrid cloud web platform drawn in isometric 3D, with the tree of groups and resources on the left](docs/screenshot.png)](https://johnoscott.github.io/isometric-cloud-editor/)
+
 An editor for cloud and network diagrams in isometric view, in the browser. Open the page, edit the example diagram
 or its YAML text, and switch between the 3D drawing and a flat 2D board.
 
