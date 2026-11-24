@@ -28,7 +28,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ==============================================================================
-@johnoscott/isometric-engine 0.12.5 — MIT
+@johnoscott/isometric-engine 0.14.1 — MIT
 ==============================================================================
 
 MIT License
