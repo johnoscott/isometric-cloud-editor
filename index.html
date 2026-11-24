@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; base-uri 'none'; form-action 'none'"
+      content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'"
     />
     <meta name="referrer" content="no-referrer" />
     <meta name="description" content="An isometric editor for cloud and network diagrams, in the browser." />
@@ -19,7 +19,8 @@
       .site-foot { flex: none; display: flex; gap: 12px; align-items: center; justify-content: space-between;
         padding: 4px 12px; font: 11px/1.4 system-ui, sans-serif; color: #5b6472; background: #f6f7f9;
         border-top: 1px solid #dde1e6; }
-      .site-foot button { font: inherit; color: inherit; background: none; border: 0; padding: 2px 4px;
+      .site-foot-actions { display: flex; gap: 10px; align-items: center; flex: none; }
+      .site-foot a, .site-foot button { font: inherit; color: inherit; background: none; border: 0; padding: 2px 4px;
         text-decoration: underline; cursor: pointer; flex: none; }
       #about { max-width: min(520px, calc(100vw - 32px)); padding: 16px 20px; border: 1px solid #dde1e6;
         border-radius: 8px; font: 13px/1.5 system-ui, sans-serif; color: #1d2330; background: #fff; }
@@ -39,14 +40,17 @@
     <footer class="site-foot">
       <span>Not affiliated with or endorsed by Amazon Web Services. AWS service names identify the services only; all
         shapes are original drawings.</span>
-      <button type="button" popovertarget="about">About</button>
+      <div class="site-foot-actions">
+        <a href="./gallery.html">Examples</a>
+        <button type="button" popovertarget="about">About</button>
+      </div>
     </footer>
     <div id="about" popover>
       <h2>Isometric Cloud Editor</h2>
       <p>An editor for cloud and network diagrams in isometric view. Edit the drawing or its YAML text, and switch
         between 3D and 2D. Everything runs in this page: nothing is sent anywhere.</p>
-      <p>Isometric Cloud Editor (MIT), built on <code>@johnoscott/isometric-engine</code> 0.9.0 (MIT).</p>
-      <p>Third-party software in this page: Lucide icons (ISC (some icons MIT, from Feather)), yaml (ISC). The editor's and the engine's licences, and these notices: <a href="./LICENSES.txt">LICENSES.txt</a>.</p>
+      <p>Isometric Cloud Editor (MIT), built on <code>@johnoscott/isometric-engine</code> 0.12.5 (MIT).</p>
+      <p>Third-party software in this page: Lucide icons (ISC (some icons MIT, from Feather)), yaml (ISC), Monaco Editor (MIT), DOMPurify (Apache-2.0 OR MPL-2.0). The editor's and the engine's licences, and these notices: <a href="./LICENSES.txt">LICENSES.txt</a>.</p>
       <p>Not affiliated with or endorsed by Amazon Web Services. AWS service names identify the services only; all
         shapes are original drawings.</p>
     </div>
